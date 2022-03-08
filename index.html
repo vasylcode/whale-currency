@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Whale Currency</title>
+
+	<link rel="stylesheet" href="./assets/css/styles.css">
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+	<div class="preloader">
+		<img class="preloader__image" src="./assets/images/whale.png" alt="coin">
+	</div>
+
+	<header class="header">
+		<img class="logo" src="./assets/images/logo.png" alt="logo">
+	</header>
+
+	<section class="main">
+		<h1 class="main-title">Whale Currency Converter</h1>
+		
+		<div class="clouds-one"></div>
+		<div class="clouds-two"></div>
+
+		<div class="currencies">
+			<div class="currency-block beige">
+				<img src="./assets/images/USD.png" alt="" class="currency-img">
+				<input type="number" class="input">
+				<span class="currency-text">USD</span>
+			</div>
+			<div class="currency-block blue">
+				<img src="./assets/images/EUR.png" alt="" class="currency-img">
+				<input type="number" class="input">
+				<span class="currency-text">EUR</span>
+			</div>
+			<div class="currency-block dark-blue">
+				<img src="./assets/images/UAH.png" alt="" class="currency-img">
+				<input type="number" class="input">
+				<span class="currency-text">UAH</span>
+			</div>
+			<div class="currency-block beige">
+				<img src="./assets/images/PLN.png" alt="" class="currency-img">
+				<input type="number" class="input">
+				<span class="currency-text">PLN</span>
+			</div>
+			<div class="currency-block blue">
+				<img src="./assets/images/GBP.png" alt="" class="currency-img">
+				<input type="number" class="input">
+				<span class="currency-text">GBP</span>
+			</div>
+			<div class="currency-block dark-blue">
+				<img src="./assets/images/CHF.png" alt="" class="currency-img">
+				<input type="number" class="input">
+				<span class="currency-text">CHF</span>
+			</div>
+			<div class="currency-block beige">
+				<img src="./assets/images/JPY.png" alt="" class="currency-img">
+				<input type="number" class="input">
+				<span class="currency-text">JPY</span>
+			</div>
+			<div class="currency-block blue">
+				<img src="./assets/images/CAD.png" alt="" class="currency-img">
+				<input type="number" class="input">
+				<span class="currency-text">CAD</span>
+			</div>
+			<div class="currency-block blue">
+				<img src="./assets/images/BTC.png" alt="" class="currency-img">
+				<input type="number" class="input">
+				<span class="currency-text">BTC</span>
+			</div>
+			<div class="currency-block beige">
+				<img src="./assets/images/ETH.png" alt="" class="currency-img">
+				<input type="number" class="input">
+				<span class="currency-text">ETH</span>
+			</div>
+			<div class="currency-block dark-blue">
+				<img src="./assets/images/SOL.png" alt="" class="currency-img">
+				<input type="number" class="input">
+				<span class="currency-text">SOL</span>
+			</div>
+			<div class="currency-block blue">
+				<img src="./assets/images/AED.png" alt="" class="currency-img">
+				<input type="number" class="input">
+				<span class="currency-text">AED</span>
+			</div>
+			<div class="currency-block beige">
+				<img src="./assets/images/MXN.png" alt="" class="currency-img">
+				<input type="number" class="input">
+				<span class="currency-text">MXN</span>
+			</div>
+			<div class="currency-block dark-blue">
+				<img src="./assets/images/NOK.png" alt="" class="currency-img">
+				<input type="number" class="input">
+				<span class="currency-text">NOK</span>
+			</div>
+			<div class="currency-block blue">
+				<img src="./assets/images/SEK.png" alt="" class="currency-img">
+				<input type="number" class="input">
+				<span class="currency-text">SEK</span>
+			</div>
+			<div class="currency-block beige">
+				<img src="./assets/images/CNY.png" alt="" class="currency-img">
+				<input type="number" class="input">
+				<span class="currency-text">CNY</span>
+			</div>
+		</div>
+		<!-- <input type="number" class="input"> -->
+	</section>
+
+	<footer class="footer">
+		<div class="footer-text">made with <3 by <a href="https://github.com/vasylcode">vasylcode</a></div>
+	</footer>
+
+
+	<script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+	<script>
+		$(window).on('load', function () {
+			$preloader = $('.preloader'),
+			$loader = $preloader.find('.preloader__image');
+			$loader.fadeOut();
+			$preloader.delay(350).fadeOut('slow');
+		});
+	</script>
+</body>
+</html>

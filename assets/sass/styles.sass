@@ -1,0 +1,227 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap')
+
+$bg-color: #2D46FF
+$bg-color2: #1B29A5
+$main-color: #F6F7FC
+$text-color: #0A0D4F
+$beige: #FFC9B2
+$blue: #AFB9FF
+$dark-blue: #2D46FF
+
+*
+	margin: 0
+	padding: 0
+
+body
+	background-color: $bg-color
+	font-family: 'Open Sans', sans-serif
+	background-image: url('../images/whales.png')
+	background-repeat: no-repeat
+	background-position: left bottom
+	background-size: contain
+	height: 100vh
+
+img
+	pointer-events: none
+	-moz-user-select: none
+	-webkit-user-select: none
+	-ms-user-select: none
+	user-select: none
+
+a
+	color: $text-color
+	text-decoration: none
+
+// PRELOADER
+
+.preloader
+	position: fixed
+	left: 0
+	top: 0
+	right: 0
+	bottom: 0
+	overflow: hidden
+	background: linear-gradient(100deg, $bg-color 10%, $bg-color2 90%)
+	z-index: 1001
+	.preloader__image
+		position: relative
+		top: 50%
+		left: 50%
+		width: 70px
+		height: 70px
+		margin: -35px
+		text-align: center
+		animation: preloader__image .8s infinite linear
+
+@keyframes preloader__image
+	100%
+		transform: rotate(360deg)
+
+// HEADER
+
+.header
+	display: flex
+	justify-content: center
+	.logo
+		margin: 15px 0px 35px 0px
+
+// MAIN
+
+.main
+	background-color: $main-color
+	width: 57.5vw
+	margin: 0 auto
+	border-radius: 80px
+	padding: 20px 50px 50px 50px
+	position: relative
+	z-index: 1
+
+.main-title
+	font-size: 40px
+	color: $text-color
+	text-align: center
+	margin-bottom: 10px
+	// text-shadow: 0px 0px 10px rgba(27, 41, 165, 0.6)
+
+.clouds-one
+	background-image: url('../images/clouds-one.png')
+	background-repeat: no-repeat
+	width: 406px
+	height: 101px
+	position: absolute
+	top: 20px
+	left: 0
+	z-index: -1
+
+.clouds-two
+	background-image: url('../images/clouds-two.png')
+	background-repeat: no-repeat
+	width: 406px
+	height: 101px
+	position: absolute
+	top: 20px
+	right: 35px
+	z-index: -1
+
+// CURRENCIES
+
+.currencies
+	margin: 0
+	display: flex
+	flex-wrap: wrap
+	align-content: space-around
+	flex-direction: column
+	max-height: 800px
+	position: relative
+
+.currency-block
+	min-width: 26vw
+	height: 55px
+	margin: 15px 0
+	border-radius: 20px
+	display: flex
+	align-items: center
+	justify-content: space-evenly
+	padding: 3px
+	-webkit-box-shadow: 0px 0px 30px 5px rgba(27, 41, 165, 0.2)
+	-moz-box-shadow: 0px 0px 30px 5px rgba(27, 41, 165, 0.2)
+	box-shadow: 0px 0px 30px 5px rgba(27, 41, 165, 0.2)
+
+.beige
+	background-color: $beige
+
+.blue
+	background-color: $blue
+
+.dark-blue
+	background-color: $dark-blue
+
+.currency-text
+	font-size: 36px
+	color: white
+	
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button 
+	-webkit-appearance: none
+	margin: 0
+
+input[type="number"] 
+	-moz-appearance: textfield
+
+input[type="number"]:hover,
+input[type="number"]:focus 
+	-moz-appearance: number-input
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button
+	-webkit-appearance: none
+	margin: 0
+
+.input
+	border: none
+	outline: none
+	border-radius: 80px
+	text-align: center
+	font-size: 22px
+	color: $text-color
+
+	max-width: 300px
+	height: 40px
+
+// FOOTER
+.footer
+	display: flex
+	justify-content: center
+	align-items: center
+	margin-top: 45px
+	background-color: white
+	height: 90px
+
+.footer-text
+	color: $text-color
+	opacity: 0.5
+	font-size: 14px
+
+// MEDIA
+
+@media (max-width: 1664px)
+	.currency-text
+		font-size: 30px
+
+@media (max-width: 1408px)
+	.main
+		width: 70vw
+
+@media (max-width: 1280px)
+	.currency-text
+		font-size: 24px
+	.input
+		max-width: 225px
+
+@media (max-width: 1152px)
+	.currency-text
+		font-size: 30px
+
+@media (max-width: 1023px)
+	.currencies
+		flex-wrap: nowrap
+		max-height: none
+	.input
+		max-width: none
+		width: 75%
+
+@media (max-width: 768px)
+	.clouds-one
+		display: none
+	.main
+		width: auto
+
+@media (max-width: 640px)
+	.input
+		width: 60%
+
+@media (max-width: 512px)
+	.main-title
+		font-size: 35px
+	.main
+		padding: 20px 20px 50px 20px
