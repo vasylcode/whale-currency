@@ -15,10 +15,11 @@ $dark-blue: #2D46FF
 body
 	background-color: $bg-color
 	font-family: 'Open Sans', sans-serif
-	background-image: url('../images/whales.png')
+	background-image: url('../../public/images/whales.svg')
 	background-repeat: no-repeat
 	background-position: left bottom
 	background-size: contain
+	background-attachment: fixed
 	height: 100vh
 
 img
@@ -84,7 +85,7 @@ a
 	// text-shadow: 0px 0px 10px rgba(27, 41, 165, 0.6)
 
 .clouds-one
-	background-image: url('../images/clouds-one.png')
+	background-image: url('../../public/images/clouds-one.png')
 	background-repeat: no-repeat
 	width: 406px
 	height: 101px
@@ -94,7 +95,7 @@ a
 	z-index: -1
 
 .clouds-two
-	background-image: url('../images/clouds-two.png')
+	background-image: url('../../public/images/clouds-two.png')
 	background-repeat: no-repeat
 	width: 406px
 	height: 101px
@@ -139,17 +140,17 @@ a
 .currency-text
 	font-size: 36px
 	color: white
-	
+
 input[type="number"]::-webkit-outer-spin-button,
-input[type="number"]::-webkit-inner-spin-button 
+input[type="number"]::-webkit-inner-spin-button
 	-webkit-appearance: none
 	margin: 0
 
-input[type="number"] 
+input[type="number"]
 	-moz-appearance: textfield
 
 input[type="number"]:hover,
-input[type="number"]:focus 
+input[type="number"]:focus
 	-moz-appearance: number-input
 
 input[type=number]::-webkit-inner-spin-button,
