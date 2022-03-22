@@ -1,0 +1,66 @@
+[
+	{
+		"name": "usd",
+		"color": "beige"
+	},
+	{
+		"name": "eur",
+		"color": "blue"
+	},
+	{
+		"name": "uah",
+		"color": "dark-blue"
+	},
+	{
+		"name": "pln",
+		"color": "beige"
+	},
+	{
+		"name": "gbp",
+		"color": "blue"
+	},
+	{
+		"name": "chf",
+		"color": "dark-blue"
+	},
+	{
+		"name": "jpy",
+		"color": "beige"
+	},
+	{
+		"name": "cad",
+		"color": "blue"
+	},
+	{
+		"name": "btc",
+		"color": "blue"
+	},
+	{
+		"name": "eth",
+		"color": "beige"
+	},
+	{
+		"name": "sol",
+		"color": "dark-blue"
+	},
+	{
+		"name": "aed",
+		"color": "blue"
+	},
+	{
+		"name": "mxn",
+		"color": "beige"
+	},
+	{
+		"name": "nok",
+		"color": "dark-blue"
+	},
+	{
+		"name": "sek",
+		"color": "blue"
+	},
+	{
+		"name": "cny",
+		"color": "beige"
+	}
+]
