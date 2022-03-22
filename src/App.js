@@ -1,6 +1,5 @@
 import React from 'react';
 import axios from 'axios';
-import { trackPromise } from 'react-promise-tracker';
 
 import './sass/styles.sass';
 import data from './data.json';
@@ -11,25 +10,23 @@ function App() {
 	const [currencies, setCurrencies] = React.useState();
 
 	React.useEffect(() => {
-		trackPromise(
-			axios
-				.get('https://cdn.jsdelivr.net/gh/fawazahmed0/currency-api@1/latest/currencies/btc.json')
-				.then(res => {
-					setCurrencies(res.data.btc);
-				})
-				.catch(err => {
-					if (err.response) {
-						console.error('Whale Currency: API response error.');
-						// client received an error response (5xx, 4xx)
-					} else if (err.request) {
-						console.error('Whale Currency: API response was not received.');
-						// client never received a response, or request never left
-					} else {
-						console.error('Whale Currency: Error while responding.');
-						// anything else
-					}
-				})
-		);
+		axios
+			.get('https://cdn.jsdelivr.net/gh/fawazahmed0/currency-api@1/latest/currencies/btc.json')
+			.then(res => {
+				setCurrencies(res.data.btc);
+			})
+			.catch(err => {
+				if (err.response) {
+					console.error('Whale Currency: API response error.');
+					// client received an error response (5xx, 4xx)
+				} else if (err.request) {
+					console.error('Whale Currency: API response was not received.');
+					// client never received a response, or request never left
+				} else {
+					console.error('Whale Currency: Error while responding.');
+					// anything else
+				}
+			});
 	}, []);
 
 	if (currencies) {
