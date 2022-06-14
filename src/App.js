@@ -8,12 +8,15 @@ import { Header, CurrencyBlock, Footer, Preloader } from './components';
 
 function App() {
 	const [currencies, setCurrencies] = React.useState();
+	const [value, setValue] = React.useState([]);
+	const [currency, setCurrency] = React.useState('btc');
 
 	React.useEffect(() => {
 		axios
-			.get('https://cdn.jsdelivr.net/gh/fawazahmed0/currency-api@1/latest/currencies/btc.json')
+			.get('https://cdn.jsdelivr.net/gh/fawazahmed0/currency-api@1/latest/currencies/' + currency + '.json')
 			.then(res => {
-				setCurrencies(res.data.btc);
+				setCurrencies(res.data[currency]);
+				console.log('AXIOS SUCCESS');
 			})
 			.catch(err => {
 				if (err.response) {
@@ -27,14 +30,32 @@ function App() {
 					// anything else
 				}
 			});
-	}, []);
+	}, [currency]);
 
 	if (currencies) {
 		data.map(data => {
-			let name = data.name;
-			return (data.price = currencies[name]);
+			if (value.length > 0) {
+				let name = value[0];
+				let price = value[1];
+
+				let newPrice = currencies[data.name] * price;
+				if (data.name === name) {
+					data.price = Number(price);
+				} else {
+					return (data.price = newPrice);
+				}
+			} else {
+				let name = data.name;
+				return (data.price = currencies[name]);
+			}
+			return null;
 		});
 		console.log(data);
+	}
+
+	function onChangeBlock(name, val) {
+		setValue([name, val]);
+		setCurrency(name);
 	}
 
 	return (
@@ -49,7 +70,7 @@ function App() {
 
 				<div className='currencies'>
 					{data.map(data => (
-						<CurrencyBlock name={data.name} color={data.color} price={data.price} key={data.name} />
+						<CurrencyBlock name={data.name} color={data.color} price={data.price} key={data.name} onChangeBlock={onChangeBlock} />
 					))}
 				</div>
 			</section>
