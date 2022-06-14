@@ -1,9 +1,10 @@
 import React from 'react';
 
 function CurrencyBlock( {name, color, price, onChangeBlock} ) {
-
 	const image = './images/'+ name +'.svg';
 	const classColor = 'currency-block ' + color;
+	
+	// price = price && price.toFixed(2);
 
 	const [value, setValue] = React.useState();
 
@@ -11,19 +12,11 @@ function CurrencyBlock( {name, color, price, onChangeBlock} ) {
 		setValue(price)
 	), [price]);
 
-	// React.useEffect(() => (
-	// 	convertValue(value)
-	// ), [value]);
-
 	const onInputChange = e => {
 		setValue(e.target.value);
 		onChangeBlock(name, e.target.value);
 		// console.log(e.target.nextSibling.innerHTML)
 	}
-
-	// const convertValue = (value) => {
-	// 	console.log("convert func", value)
-	// }
 
   return (
 	<div className={classColor} key={name}>

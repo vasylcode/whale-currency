@@ -42,11 +42,11 @@ function App() {
 				if (data.name === name) {
 					data.price = Number(price);
 				} else {
-					return (data.price = newPrice);
+					return (data.price = newPrice.toFixed(3));
 				}
 			} else {
 				let name = data.name;
-				return (data.price = currencies[name]);
+				return (data.price = currencies[name].toFixed(2));
 			}
 			return null;
 		});
